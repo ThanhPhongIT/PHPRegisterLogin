@@ -1,0 +1,25 @@
+<ion-header>
+  <app-base-header-back [headerTitle]="'Add New Record'"></app-base-header-back>
+  <app-nav-step [currentState]="3"> </app-nav-step>
+</ion-header>
+<div class="success-wrap">
+  <div class="wrapper">
+    <div class="icon-success">
+      <img src="assets/svg/more/success-upload.svg" alt="" />
+    </div>
+    <div class="info">
+      <p>
+        Upload successful. Your record is currently being reviewed. We will
+        notify you the result as soon as it is available. Thank you!
+      </p>
+    </div>
+    <div class="back-button">
+      <app-base-button
+        [buttonStyle]="{ width: '100%', cssClass: 'button-normal' }"
+        (callback)="closeModal()"
+      >
+        Back to Vaccine Records
+      </app-base-button>
+    </div>
+  </div>
+</div>

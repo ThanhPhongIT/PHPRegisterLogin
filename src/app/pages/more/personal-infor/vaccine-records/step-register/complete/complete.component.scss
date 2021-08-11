@@ -1,0 +1,17 @@
+.success-wrap{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 30px;
+    .wrapper{
+        text-align: center;
+        .info{
+            margin: 20px 0;
+        }
+    }
+}
+ion-header {
+    &::after {
+        content: none;
+    }
+}

@@ -1,0 +1,71 @@
+.step-upload {
+ .title{
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0 30px;
+  text-align: center;
+  margin-bottom: 40px;
+ }
+  .upload {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    .image-upload {
+      margin-right: 14px;
+      position: relative;
+      margin-bottom: 60px;
+      margin-top: 10px;
+      position: relative;
+      width: 153px;
+      height: 153px;
+      ion-label {
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+        font-size: 14px;
+        color: var(--ion-secondary-contrast);
+      }
+      .upload-image-area {
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+        .image {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          bottom: -5px;
+          left: 0;
+          z-index: 99;
+        }
+        .clear{
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          top: 18px;
+          right: 18px;
+          z-index: 999;
+        }
+        
+      }
+    }
+    
+  }
+  .button {
+    width: 100%;
+    position: absolute;
+    bottom: 95px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+ion-header {
+  &::after {
+      content: none;
+  }
+}

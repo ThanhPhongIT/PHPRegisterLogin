@@ -1,0 +1,67 @@
+<ion-header>
+    <app-base-header-back [headerTitle]="'Vaccine Records'">
+    </app-base-header-back>
+</ion-header>
+<ion-content>
+    <div
+        class="add-record"
+        *ngIf="!dataRecord"
+    >
+        <div class="image-add">
+            <img
+                src="assets/svg/more/record-add.svg"
+                alt=""
+            />
+        </div>
+        <div class="describe">
+            Start uploading the file now to create your own Vaccine Record
+        </div>
+        <div class="button">
+            <app-base-button
+                [buttonStyle]="{width: '100%', cssClass: 'button-normal'}"
+                (callback)="openStep()"
+            >
+                Add New Record
+            </app-base-button>
+        </div>
+    </div>
+    <div
+        class="record-detail"
+        *ngIf="dataRecord"
+    >
+        <div class="qr-frame">
+            <img
+                src="assets/svg/more/qrcode-1.svg"
+                alt=""
+            />
+        </div>
+        <div
+            class="note-qrcode"
+            *ngIf="dataRecord.status==1"
+        >
+            Your QR Code will be available as soon as your record is verified
+        </div>
+        <div class="record-base">
+            <app-base-card-record [data]="dataRecord"> </app-base-card-record>
+        </div>
+        <div
+            class="button"
+            *ngIf="dataRecord.status==2"
+        >
+            <app-base-button [buttonStyle]="{width: '100%', cssClass: 'button-black'}">
+                Add to Apple Wallet
+            </app-base-button>
+            <div class="gr-button">
+                <app-base-button [buttonStyle]="{width: '153px', cssClass: 'button-no-bg'}">
+                    Share
+                </app-base-button>
+                <app-base-button
+                    [buttonStyle]="{width: '153px', cssClass: 'button-no-bg'}"
+                    (callback)="openDetail($event)"
+                >
+                    Detail
+                </app-base-button>
+            </div>
+        </div>
+    </div>
+</ion-content>

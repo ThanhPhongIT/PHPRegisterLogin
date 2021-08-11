@@ -1,0 +1,29 @@
+.welcome {
+    --background: var(--ion-color-other-btn);
+    .slide-item {
+        display: flex;
+        flex-direction: column;
+        img {
+            margin-left: -20px;
+        }
+        span {
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+            color: var(--ion-color-light);
+            padding-bottom: 50px;
+        }
+    }
+    .welcome-button {
+        display: flex;
+        justify-content: center;
+    }
+}
+::ng-deep .welcome {
+    .swiper-pagination-bullet {
+        background: #e5e5e5 !important;
+    }
+    .swiper-pagination-bullet-active {
+        background: #428cff !important;
+    }
+}

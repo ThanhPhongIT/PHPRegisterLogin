@@ -1,0 +1,82 @@
+<ion-header>
+    <app-base-header-back [headerTitle]="'Edit Profile'"
+                          [defaultHref]="'/main/more/personal/profile'">
+    </app-base-header-back>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <form [formGroup]="profileForm"
+                      (submit)="onSubmit()"
+                      *ngIf="profile$ | async as profileDetail">
+
+
+                    <ion-item>
+                        <ion-label position="stacked">Full Name*</ion-label>
+                        <ion-input type="text"
+                                   formControlName="LastName"
+                                   [placeholder]="profileDetail.FullName"></ion-input>
+                    </ion-item>
+
+
+                    <ion-item>
+                        <ion-label position="stacked"> Gender*</ion-label>
+                        <ion-select value="notifications"
+                                    interface="action-sheet"
+                                    ion-select
+                                    value="male"
+                                    formControlName="Gender"
+                                    [placeholder]="profileDetail.Gender">
+                            <ion-select-option value="male">Male</ion-select-option>
+                            <ion-select-option value="female">Female</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+
+
+                    <ion-item class="customs-action">
+                        <ion-label position="stacked">Date of birth*</ion-label>
+
+                        <ion-datetime [placeholder]="profileDetail.DOB | date: 'dd/MM/yyyy'"
+                                      display-format="DD/MM/YYYY"
+                                      picker-format="DD/MM/YYYY"
+                                      formControlName="DOB"
+                                      #dateTime></ion-datetime>
+                        <div class="action"
+                             (click)="openDateTime()">
+                            <img src="assets/icon/calendar.svg"
+                                 alt="">
+                        </div>
+                    </ion-item>
+
+
+                    <!-- <ion-item>
+                        <ion-label position="stacked">Email*</ion-label>
+                        <ion-input
+                            type="Email"
+                            formControlName="Email"
+                            placeholder="chitrungle@gmail.com"
+                        ></ion-input>
+                    </ion-item> -->
+
+
+                    <ion-item>
+                        <ion-label position="stacked">Address*</ion-label>
+                        <ion-input type="text"
+                                   formControlName="Street"
+                                   [placeholder]="profileDetail.Address"></ion-input>
+                    </ion-item>
+
+
+                    <ion-button type="submit"
+                                [disabled]="!profileForm.valid"
+                                class="button-normal">Save</ion-button>
+
+                </form>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

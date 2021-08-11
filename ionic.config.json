@@ -1,0 +1,7 @@
+{
+  "name": "mdCareclik",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

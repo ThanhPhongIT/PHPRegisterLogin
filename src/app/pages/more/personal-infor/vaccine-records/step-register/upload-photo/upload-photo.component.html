@@ -1,0 +1,71 @@
+<ion-header>
+  <app-base-header-back [headerTitle]="'Add New Record'"></app-base-header-back>
+  <app-nav-step [currentState]="2"> </app-nav-step>
+</ion-header>
+<ion-content class="step-upload">
+  <div class="title">
+    Please upload a photo of the front and back of your record so we can verify
+    your information
+  </div>
+  `
+  <div class="upload">
+    <div class="image-upload">
+      <ion-label>Front</ion-label>
+      <div class="upload-image-area">
+        <div (click)="changePhoto('front')" class="image">
+          <img
+            *ngIf="uploadFrontImage != null"
+            src="data:image/png;base64,{{ uploadFrontImage }}"
+          />
+          <img
+            *ngIf="uploadFrontImage == null"
+            src="assets/svg/more/upload-image.svg"
+          />
+        </div>
+        <img
+          src="assets/icon/clear-icon.svg"
+          alt=""
+          class="clear"
+          *ngIf="uploadFrontImage"
+          (click)="uploadFrontImage = null"
+        />
+      </div>
+    </div>
+    <div class="image-upload">
+      <ion-label>Back</ion-label>
+      <div class="upload-image-area">
+        <div (click)="changePhoto('back')" class="image">
+          <img
+            *ngIf="uploadBackImage != null"
+            src="data:image/png;base64,{{ uploadBackImage }}"
+          />
+          <img
+            *ngIf="uploadBackImage == null"
+            src="assets/svg/more/upload-image.svg"
+          />
+        </div>
+        <img
+          src="assets/icon/clear-icon.svg"
+          alt=""
+          class="clear"
+          *ngIf="uploadBackImage"
+          (click)="uploadBackImage = null"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="button">
+    <app-base-button
+      [buttonStyle]="{ width: '153px', cssClass: 'button-no-bg' }"
+      (callback)="prev()"
+    >
+      Back
+    </app-base-button>
+    <app-base-button
+      [buttonStyle]="{ width: '153px', cssClass: 'button-normal' }"
+      (callback)="openComplete()"
+    >
+      Next
+    </app-base-button>
+  </div>
+</ion-content>

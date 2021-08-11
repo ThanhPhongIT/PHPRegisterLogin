@@ -1,0 +1,63 @@
+<ion-header>
+    <app-base-header-back [headerTitle]="'Photo requirements'"></app-base-header-back>
+</ion-header>
+<ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12">
+                <div class="dieukhoan">
+                    <div class="title">
+                        Your photos must meet below requirements:
+                    </div>
+                    <div class="item">
+                        <div class="radio">
+                            <img src="assets/icon/radio-button.svg" alt="">
+                        </div>
+                        <div class="text-op">
+                            The photos are bright and clear.
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="radio">
+                            <img src="assets/icon/radio-button.svg" alt="">
+                        </div>
+                        <div class="text-op">
+                            All corners of the document are visible.
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="radio">
+                            <img src="assets/icon/radio-button.svg" alt="">
+                        </div>
+                        <div class="text-op">
+                            The documents must be original and still in effect.
+                        </div>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="12">
+                <div class="title">Below photos will not be accepted:</div>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col size="4" class="item-img">
+                <img src="assets/icon/blur.svg" alt="">
+                <div class="des">Blurry</div>
+            </ion-col>
+            <ion-col size="4" class="item-img">
+                <img src="assets/icon/dark.svg" alt="">
+                <div class="des">Too dark</div>
+            </ion-col>
+            <ion-col size="4" class="item-img">
+                <img src="assets/icon/hide.svg" alt="">
+                <div class="des">1 corner is hidden</div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
+<ion-footer>
+    <app-base-button (callback)="prev()" [buttonStyle]="buttonStyleBack">Back</app-base-button>
+    <app-base-button (callback)="openTakePhotoFront()" [buttonStyle]="buttonStyle">Next</app-base-button>
+</ion-footer>

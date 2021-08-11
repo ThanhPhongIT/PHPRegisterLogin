@@ -1,0 +1,88 @@
+<form action="" class="base-input">
+  <div class="login-form-input" *ngFor="let item of config">
+    <div *ngIf="item.type == 'text'" class="form-group">
+      <label class="form-label" position="stacked">{{ item.label }}</label>
+      <input
+        class="form-input"
+        type="text"
+        [ngModel]="model[item.id]"
+        name="item.id"
+        placeholder="{{ item.placeholder }}"
+      />
+    </div>
+    <div *ngIf="item.type == 'select-text'">
+      <label class="form-label" position="stacked">{{ item.label }}</label>
+      <div>
+        <ion-row>
+          <ion-col size="3">
+            <ion-select
+              mode="ios"
+              okText="Okay"
+              cancelText="Cancel"
+              [name]="especially[1].id"
+            >
+              <ion-select-option value="1">+1</ion-select-option>
+              <ion-select-option value="2">+84</ion-select-option>
+            </ion-select>
+          </ion-col>
+          <ion-col size="9">
+            <input
+              class="form-input"
+              type="text"
+              [ngModel]="model[especially[0].id]"
+              name="especially[0].id"
+              placeholder="{{ especially[0].placeholder }}"
+            />
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+    <ion-item class="date-picker" *ngIf="item.type == 'date'">
+      <ion-label class="form-label" position="stacked">
+        {{ item.label }}
+      </ion-label>
+      <ion-datetime [(ngModel)]="model[item.id]" name="item.id"  mode="ios"></ion-datetime>
+      <img src="assets/icon/calendar.svg" alt="" />
+    </ion-item>
+    <ion-item align-items-center no-padding *ngIf="item.type == 'select'">
+      <ion-label class="form-label" position="stacked">
+        {{ item.label }}
+      </ion-label>
+      <ion-select
+        mode="ios"
+        okText="Okay"
+        cancelText="Cancel"
+        [(ngModel)]="model[item.id]"
+        [name]="item.id"
+      >
+        <ion-select-option [value]="i.id" *ngFor="let i of item.data"
+          >{{i.name}}</ion-select-option
+        >
+      </ion-select>
+      <img src="assets/icon/select-icon.svg" alt="" />
+    </ion-item>
+  </div>
+  <div class="button" *ngIf="buttonInfo.type == 2">
+    <app-base-button
+      [buttonStyle]="{ width: '153px', cssClass: 'button-no-bg' }"
+      (callback)="callback.emit('back')"
+    >
+      {{ buttonInfo.text[0] }}
+    </app-base-button>
+    <app-base-button
+      [buttonStyle]="{ width: '153px', cssClass: 'button-normal' }"
+      (callback)="callback.emit(model)"
+    >
+      {{ buttonInfo.text[1] }}
+    </app-base-button>
+  </div>
+  <div class="button" *ngIf="buttonInfo.type == 1">
+    <app-base-button
+      [buttonStyle]="{ width: '100%', cssClass: 'button-normal' }"
+      (callback)="callback.emit(model)"
+      [style.width]="'100%'"
+    >
+      {{ buttonInfo.text[0] }}
+    </app-base-button>
+  </div>
+</form>

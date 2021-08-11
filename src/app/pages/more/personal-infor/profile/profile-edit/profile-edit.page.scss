@@ -1,0 +1,19 @@
+.customs-action{
+    position: relative;
+    .action {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        z-index: 101;
+        width: 24px;
+        height: 24px;
+    }
+}
+ion-item {
+    margin-right: 10px;
+}
+ion-button {
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 53px;
+}

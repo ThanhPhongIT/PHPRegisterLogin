@@ -1,0 +1,39 @@
+.home {
+    padding: 15px;
+    .home-search{}
+    .home-info{
+        height: 145px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+        padding: 30px 5px;
+        ion-avatar {
+            width: 36px;
+            height: 36px;
+            margin-top: 36px;
+        }
+    }
+    .home-item{
+        background: linear-gradient(147.49deg, #737373 0%, #737373 100%);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 19px;
+        color: #E6E6E6;
+        height: 124px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        // justify-content: center;
+
+        border-radius: 24px;
+        min-width: 99px;
+        padding: 20px;
+        .home-item-text{
+            margin-top: 15px;
+        }
+    }
+
+    .home-card{}
+}

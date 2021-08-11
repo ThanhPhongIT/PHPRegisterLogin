@@ -1,0 +1,16 @@
+<ion-header>
+  <app-base-header-back [headerTitle]="'Add New Record'"></app-base-header-back>
+  <app-nav-step [currentState]="1"> </app-nav-step>
+</ion-header>
+<ion-content>
+  <div class="form-record">
+    <div class="title">
+      Please provide information on your record
+    </div>
+    <div class="form">
+      <app-base-input [config]="inputConfig" [buttonInfo]="{type: 2, text: ['back','next']}" (callback)="handleEvent($event)">
+
+      </app-base-input>
+    </div>
+  </div>
+</ion-content>

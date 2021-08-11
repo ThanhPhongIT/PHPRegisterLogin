@@ -1,0 +1,18 @@
+.base-alert-wrap{
+    .content{
+        display:flex;
+        justify-content: center;
+        margin-top: 10px;
+        p{
+            width: 88%;
+            text-align: center;
+            color: var(--ion-color-secondary-contrast);
+        }
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        
+    }
+}

@@ -1,0 +1,20 @@
+<div class="base-success-wrap">
+  <div class="wrapper">
+    <div class="icon-success">
+      <img src="assets/icon/success-icon.svg" alt="" />
+    </div>
+    <div class="info">
+      <p>
+        {{ info }}
+      </p>
+    </div>
+    <div class="back-button">
+      <app-base-button 
+        [buttonStyle]="{ width: '100%', cssClass: 'button-normal' }"
+        (callback)="closeModal()"
+      >
+        {{textButton}}
+      </app-base-button>
+    </div>
+  </div>
+</div>

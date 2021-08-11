@@ -1,0 +1,54 @@
+.verify {
+    padding: 0 30px;
+    .verify-logo {
+        text-align: center;
+        width: 100%;
+        h1 {
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 36px;
+            color: var(--ion-color-secondary-contrast);
+        }
+        h3 {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        span {
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: var(--ion-color-secondary-contrast);
+            opacity: 50%;
+        }
+    }
+    .signup {
+        margin-top: 150px;
+        text-align: center;
+        span {
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    .is_keyboard_show {
+        background-image: none !important;
+        --keyboard-offset: 350px !important;
+    }
+    form {
+        margin-top: 1.5em;
+        ion-input {
+            display: inline-block;
+            width: 45px;
+            height: 60px;
+            margin: 5px;
+            border: 0.2px solid var(--ion-color-light-shade);
+            color: var(--ion-color-primary);
+            border-radius: 10px;
+            --padding-start: 7px;
+        }
+    }
+
+    .disabled {
+        color: var(--ion-color-secondary);
+    }
+}

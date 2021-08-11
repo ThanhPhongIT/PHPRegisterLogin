@@ -1,0 +1,182 @@
+.button-normal {
+    background: var(--ion-color-primary);
+    color: var(--ion-color-secondary);
+}
+.button-blue {
+    background: var(--ion-color-secondary);
+    color: var(--ion-color-primary);
+}
+.button-black {
+    background: var(--ion-color-primary);
+    color: var(--ion-color-primary-contrast);
+}
+.button-no-bg {
+    background-color: transparent;
+    border: 1px solid var(--ion-color-primary);
+    color: var(--ion-color-other-btn);
+}
+.button-no-border {
+    border: none;
+    background-color: transparent;
+    color: var(--ion-color-other-btn);
+}
+.mx-5 {
+    margin: 0 5px;
+}
+.title {
+    line-height: 36px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.my-alert-custom {
+    .modal-shadow {
+        background: rgba(22, 21, 20, 0.24);
+        backdrop-filter: blur(6px);
+        z-index: -1;
+    }
+    .modal-wrapper {
+        height: 180px;
+        display: block;
+        border-radius: 1rem 1rem 0 0;
+        width: 85%;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(40px);
+    }
+}
+.btn-sm-success {
+    background: var(--ion-color-success);
+    color: var(--ion-color-success-contrast);
+    padding: 5px 16px;
+    line-height: 18px;
+    font-style: normal;
+    font-weight: normal;
+    outline: none;
+    border-radius: 16px;
+    text-align: center;
+}
+
+
+.btn-sm-warning{
+    background: var(--ion-color-warning);
+    color: var(--ion-color-warning-contrast);
+    padding: 5px 16px;
+    line-height: 18px;
+    font-style: normal;
+    font-weight: normal;
+    outline: none;
+    border-radius: 16px;
+    text-align: center;
+}
+
+
+.btn-login {
+    background: var(--ion-color-primary);
+    color: var(--ion-color-secondary);
+    padding: 5px 16px;
+    line-height: 18px;
+    font-style: normal;
+    font-weight: normal;
+    outline: none;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.text-label{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 15px;
+    color: rgba($color: #272727, $alpha: 0.5);
+}
+.text-input{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    color: #272727;
+}
+
+.logout-modal{
+    width: 315px;
+    height: 180px;
+    // width: 100%;
+    // height: 100vh;
+    border-radius: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+
+}
+
+.modal-wrapper {
+  background: #222;
+}
+
+/* Works - pass "my-custom-class" in cssClass to increase specificity */
+.my-custom-class .modal-wrapper {
+  background: #222;
+}
+
+ion-header {
+    &::after{
+        content: none;
+    }
+}
+
+
+.toast-err {
+  color: red;
+  font-size: 14px;
+}
+
+
+
+.verified {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px;
+  width: 129px;
+  height: 26px;
+  /* Orange */
+  background: #94E278;
+  border-radius: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #000000;
+  /* Inside Auto Layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.verified-not {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px;
+  width: 129px;
+  height: 26px;
+  /* Orange */
+  background: #FBC150;
+  border-radius: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #000000;
+  /* Inside Auto Layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

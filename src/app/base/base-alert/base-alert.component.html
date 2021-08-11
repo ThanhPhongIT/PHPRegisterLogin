@@ -1,0 +1,22 @@
+<div class="base-alert-wrap">
+  <div class="title">
+    {{ title }}
+  </div>
+  <div class="content">
+    <p>{{ content }}</p>
+  </div>
+  <div class="button">
+    <app-base-button
+      (callback)="closeModal()"
+      [buttonStyle]="{ width: '137px', cssClass: 'button-no-bg mx-5' }"
+    >
+      Cancel
+    </app-base-button>
+    <app-base-button
+    (callback)="logout()"
+      [buttonStyle]="{ width: '137px', cssClass: 'button-normal mx-5' }"
+    >
+      I Agree
+    </app-base-button>
+  </div>
+</div>

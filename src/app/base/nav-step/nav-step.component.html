@@ -1,0 +1,45 @@
+<div class="wrapper">
+  <div class="stepper">
+    <ul class="stepper-number" [ngSwitch]="currentState">
+      <span [style.width.%]="0" *ngSwitchCase="1" class="progress"></span>
+      <span [style.width.%]="50" *ngSwitchCase="2" class="progress"></span>
+      <span [style.width.%]="50" *ngSwitchCase="3" class="progress"></span>
+      <li>
+        <ion-nav-link *ngIf="currentState == 1">
+          <a>1</a>
+        </ion-nav-link>
+        <a class="disable_nav" *ngIf="currentState != 1">1</a>
+      </li>
+      <li>
+        <ion-nav-link *ngIf="currentState == 2">
+          <a>2</a>
+        </ion-nav-link>
+
+        <a class="disable_nav" *ngIf="currentState != 2">2</a>
+      </li>
+      <li>
+        <ion-nav-link *ngIf="currentState == 3">
+          <a>3</a>
+        </ion-nav-link>
+        <a class="disable_nav" *ngIf="currentState != 3">3</a>
+      </li>
+    </ul>
+    <div class="text">
+      <ul class="stepper-text">
+        <li>
+          <p [class.enable]="currentState >= 1">Info</p>
+        </li>
+        <li>
+          <p [class.enable]="currentState >= 2" [style.padding-left.px]="15">
+            Upload photo
+          </p>
+        </li>
+        <li>
+          <p [class.enable]="currentState >= 3" [style.margin-right.px]="-20">
+            Completed
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

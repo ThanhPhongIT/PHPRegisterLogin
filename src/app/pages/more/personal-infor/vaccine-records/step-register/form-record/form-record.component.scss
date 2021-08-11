@@ -1,0 +1,15 @@
+.form-record{
+    padding: 0 15px;
+    .title{
+        font-size: 16px;
+        text-align: center;
+    }
+    .form{
+        padding: 0 15px;
+    }
+}
+ion-header {
+    &::after {
+        content: none;
+    }
+}

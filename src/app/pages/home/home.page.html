@@ -1,0 +1,85 @@
+<ion-header>
+    <app-base-header [baseHeaderTitle]="'Home'"> </app-base-header>
+    <!-- <app-base-header-back [headerTitle]="'Home'">
+
+    </app-base-header-back> -->
+</ion-header>
+
+<ion-content>
+    <ion-grid class="home">
+
+        <ion-searchbar></ion-searchbar>
+
+        <!-- info -->
+        <ion-row *ngIf="profile$| async as profileDetail">
+            <ion-col size="7">
+                <div class="home-info">
+                    <div> Hello,</div>
+                    <div> {{profileDetail.FullName}} </div>
+
+                </div>
+            </ion-col>
+
+            <ion-col size="5">
+                <div class="home-info">
+                    <ion-avatar>
+                        <img [src]="profileDetail.Avatar">
+                    </ion-avatar>
+                </div>
+            </ion-col>
+        </ion-row>
+        <!-- list item -->
+        <ion-row>
+            <ion-col>
+                <div class="home-item">
+                    <img
+                        src="assets/svg/home/icon-vaccine.svg"
+                        alt=""
+                    >
+                    <div class="home-item-text">
+                        Vaccine <br> Records
+                    </div>
+                </div>
+            </ion-col>
+
+            <ion-col>
+                <div class="home-item">
+                    <img
+                        src="assets/svg/home/icon-medical.svg"
+                        alt=""
+                    >
+                    <div class="home-item-text"> Medical</div>
+                </div>
+
+            </ion-col>
+
+            <ion-col>
+                <div class="home-item">
+                    <img
+                        src="assets/svg/home/icon-lab.svg"
+                        alt=""
+                    >
+                    <div class="home-item-text"> Lab Tests
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+        <!-- card -->
+        <ion-row>
+            <ion-col size="12">
+                <app-base-card
+                    [data]="dataCard"
+                    (callback)="routerTo()"
+                >
+
+                </app-base-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+
+
+
+
+</ion-content>

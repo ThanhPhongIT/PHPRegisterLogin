@@ -1,0 +1,53 @@
+.add-record{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 30px;
+    .describe {
+        margin-top: 90px;
+        margin-bottom: 30px;
+        font-size: 16px;
+        color: var(--ion-color-secondary-contrast);
+    }
+}
+.record-detail{
+    padding: 0 30px;
+    margin-top: 20px;
+    .qr-frame{  
+        border: 1px solid var(--ion-color-primary);
+        border-radius: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+        img{
+            width: 153px;
+            height: 153px;
+        }
+    }
+    .note-qrcode{
+        margin-top: 16px;
+        color: var(--ion-color-secondary-contrast);
+        opacity: 0.5;
+        text-align: center;
+        font-size: 13px;
+    }
+    .record-base{
+        margin-top: 35px;
+    }
+    .button{
+        margin-top: 24px;
+        .gr-button{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+    }
+}
+ion-header {
+    &::after {
+        content: none;
+    }
+}

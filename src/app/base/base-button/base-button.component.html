@@ -1,0 +1,8 @@
+<button
+    (click)="callback.emit()"
+    [style.width]="buttonStyle.width"
+    [class]="buttonStyle.cssClass"
+    [disabled]="buttonStyle.disable ? 'disabled' : null"
+>
+    <ng-content></ng-content>
+</button>

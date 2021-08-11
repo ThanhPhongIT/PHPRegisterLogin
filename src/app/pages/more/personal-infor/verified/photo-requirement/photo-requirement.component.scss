@@ -1,0 +1,61 @@
+ion-header {
+    &::after {
+        content: none;
+    }
+}
+
+.title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin-bottom: 17px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    img {
+        margin-right: 18px;
+    }
+    .text-op {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        /* identical to box height */
+        color: #000000;
+        opacity: 0.5;
+    }
+}
+
+.item-img {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .des {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 21px;
+        /* identical to box height */
+        text-align: center;
+        color: #000000;
+        opacity: 0.5;
+        margin-top: 10px;
+    }
+}
+
+ion-footer {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none !important;
+    &::before {
+        content: none;
+    }
+}

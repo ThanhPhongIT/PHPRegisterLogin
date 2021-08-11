@@ -1,0 +1,56 @@
+<ion-header>
+    <app-base-header-back [headerTitle]="'Select an ID type'"></app-base-header-back>
+</ion-header>
+<ion-content>
+    <div class="select-region">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <div class="title">Issuing country/region</div>
+                    <ion-item lines="none" (click)="presentActionSheet()">
+                        <div class="left">
+                            <div class="icon">
+                                <img [src]="data.icon" alt="">
+                            </div>
+                            <div class="name">{{data.name}}</div>
+                        </div>
+                        <div class="select" slot="end">
+                            <img src="assets/icon/arrow-down.svg" alt="">
+                        </div>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+    <div class="select-id">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <div class="title">Select an ID type</div>
+                    <ion-list>
+                        <ion-radio-group [(ngModel)]="type">
+                            <ion-item>
+                                <ion-label><img src="assets/icon/paper.svg" alt="">Driver's License</ion-label>
+                                <ion-radio slot="end" value="Driver's License"></ion-radio>
+                            </ion-item>
+
+                            <ion-item>
+                                <ion-label><img src="assets/icon/paper.svg" alt="">Passport</ion-label>
+                                <ion-radio slot="end" value="Passport"></ion-radio>
+                            </ion-item>
+
+                            <ion-item>
+                                <ion-label><img src="assets/icon/paper.svg" alt="">State or Government Issued Id</ion-label>
+                                <ion-radio slot="end" value="State or Government Issued Id"></ion-radio>
+                            </ion-item>
+                        </ion-radio-group>
+                    </ion-list>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </div>
+</ion-content>
+<ion-footer>
+    <app-base-button (callback)="prev()" [buttonStyle]="buttonStyleBack">Back</app-base-button>
+    <app-base-button (callback)="openPhotoCom()" [buttonStyle]="buttonStyle">Next</app-base-button>
+</ion-footer>

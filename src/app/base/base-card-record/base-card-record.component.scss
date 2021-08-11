@@ -1,0 +1,43 @@
+.base-card-record {
+    text-align: center;
+    .avatar {
+        img {
+            width: 56px;
+            height: 56px;
+            border-radius: 100%;
+        }
+    }
+    .name {
+        font-weight: 600;
+        color: var(--ion-color-secondary-contrast);
+        font-size: 18px;
+        margin-top: 8px;
+    }
+    .text-record-detail {
+        font-size: 14px;
+        color: var(--ion-color-secondary-contrast);
+        margin: 8px 0;
+    }
+    .date {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -8px;
+    }
+    .button {
+        margin-top: 24px;
+        button {
+            width: 153px;
+            height: 28px;
+            border-radius: 16px;
+            outline: none;
+            font-size: 12px;
+            color: var(--ion-color-secondary-contrast);
+        }
+        .not-verified {
+            background: #fbc150;
+        }
+        .verified {
+            background: #94e278;
+        }
+    }
+}

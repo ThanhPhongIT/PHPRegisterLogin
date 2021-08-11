@@ -1,0 +1,12 @@
+ion-tab-button {
+    // Icon and text
+    --color: #939393;
+    --color-selected: var(--ion-color-primary);
+    // Background
+    ion-icon {
+      height: 50%;
+    }
+    --background: white;
+    --background-focused: white;
+    --ripple-color: white;
+}

@@ -1,0 +1,51 @@
+<ion-header>
+    <app-base-header [baseHeaderTitle]="'Personal info'"></app-base-header>
+</ion-header>
+
+<ion-content>
+    <ion-grid *ngIf="profile$ | async as profileDetail">
+        <ion-row class="m-3">
+            <ion-col size="4">
+                <ion-avatar>
+                    <img
+                        src="assets/icon/avatar.svg"
+                        alt=""
+                    >
+                </ion-avatar>
+            </ion-col>
+            <ion-col size="8">
+                <div class="name">{{profileDetail.FullName}}</div>
+                <div class="phone">{{profileDetail.Phone}}</div>
+                <div class="verified" *ngIf="profileDetail.Verified == true" >Verified</div>
+                <div class="verified-not" *ngIf="profileDetail.Verified == false" >Not yet verified</div>
+
+                
+            </ion-col>
+        </ion-row>
+        <!-- <ion-row>
+            <ion-col size="12">
+                <app-base-card
+                    [data]="dataCard"
+                    (callback)="openVerifiedPage()"
+                ></app-base-card>
+            </ion-col>
+        </ion-row> -->
+        <ion-row>
+            <ion-col size="12">
+                <app-base-category
+                    *ngFor="let item of listCategory"
+                    [data]="item"
+                ></app-base-category>
+                <app-base-category
+                    [data]="logout"
+                    (callback)="btnSubmit()"
+                ></app-base-category>
+            </ion-col>
+        </ion-row>
+
+        
+
+    </ion-grid>
+
+
+</ion-content>

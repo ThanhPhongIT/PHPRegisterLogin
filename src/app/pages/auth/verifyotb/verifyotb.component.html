@@ -1,0 +1,95 @@
+<app-base-header-back></app-base-header-back>
+<ion-content class="verify">
+    <ion-grid>
+        <ion-row>
+            <ion-col
+                size="12"
+                class="verify-logo"
+            >
+                <img
+                    src="../../../../assets/svg/auth/verify.svg"
+                    alt=""
+                >
+                <h1>Verify OTP</h1>
+                <span>Please enter the OTP below to verify your phone number</span>
+            </ion-col>
+            <ion-col size="12">
+                <form>
+                    <ion-row text-center>
+                        <ion-col>
+                            <ion-input
+                                #otp1
+                                formControlName="otp1"
+                                required
+                                maxLength="1"
+                                [debounce]="50"
+                                (ionChange)="otpController($event,otp2,'')"
+                            >
+                            </ion-input>
+                            <ion-input
+                                #otp2
+                                formControlName="otp2"
+                                required
+                                maxLength="1"
+                                (ionChange)="otpController($event,otp3,otp1)"
+                            >
+                            </ion-input>
+                            <ion-input
+                                #otp3
+                                formControlName="otp3"
+                                required
+                                maxLength="1"
+                                (ionChange)="otpController($event,otp4,otp2)"
+                            >
+                            </ion-input>
+                            <ion-input
+                                #otp4
+                                formControlName="otp4"
+                                required
+                                maxLength="1"
+                                (ionChange)="otpController($event,otp5,otp3)"
+                            >
+                            </ion-input>
+                            <ion-input
+                                #otp5
+                                formControlName="otp5"
+                                required
+                                maxLength="1"
+                                (ionChange)="otpController($event,otp6,otp4)"
+                            >
+                            </ion-input>
+                            <ion-input
+                                #otp6
+                                formControlName="otp6"
+                                required
+                                maxLength="1"
+                                (ionChange)="otpController($event,'',otp5)"
+                            >
+                            </ion-input>
+                        </ion-col>
+                    </ion-row>
+                </form>
+            </ion-col>
+            <ion-col size="12">
+                <app-base-button
+                    [buttonStyle]="{width: '100%', cssClass: 'button-normal'}"
+                    (callback)="onCallBack($event)"
+                >
+                    Verify OTP
+                </app-base-button>
+            </ion-col>
+            <ion-col
+                size="12"
+                class="verify-logo"
+            >
+                <h3> Resend OTP </h3>
+            </ion-col>
+            <ion-col
+                size="12"
+                class="signup"
+            >
+                <span>Already have an account? <a [routerLink]="['/index/auth/login']">Log in here</a> </span>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

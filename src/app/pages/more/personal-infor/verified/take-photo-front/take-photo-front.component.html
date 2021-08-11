@@ -1,0 +1,60 @@
+<ion-header>
+    <app-base-header-back [headerTitle]="data.type"></app-base-header-back>
+</ion-header>
+<ion-content *ngIf="!data.imgShow[0]; else haveImg">
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12">
+                <div class="title">
+                    {{data.title}}
+                </div>
+                <div class="des">
+                    {{data.des}}
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <div class="take-front">
+        <ion-grid>
+            <ion-row>
+                <img [style.margin]="'auto'" [style.margin-top.px]="20" src="assets/icon/take-photo.svg" alt="">
+            </ion-row>
+        </ion-grid>
+        <ion-fab vertical="bottom" horizontal="center" slot="fixed" [style.margin-bottom.px]="20">
+            <ion-fab-button (click)="addPhotoToGallery()">
+                <img src="assets/icon/camera.svg" alt="">
+            </ion-fab-button>
+        </ion-fab>
+    </div>
+</ion-content>
+<ng-template #haveImg>
+    <ion-content>
+        <ion-grid>
+            <ion-row>
+                <ion-col size="12">
+                    <div class="title">
+                        {{data.title}}
+                    </div>
+                    <div class="des">
+                        {{data.des}}
+                    </div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+        <ion-grid [style.margin-top.px]="20">
+            <ion-row>
+
+                <ion-col size="12" class="show">
+                    <ion-item lines="none">
+                        <ion-img src="data:imgae/png;base64,{{data.imgShow[0].base64}}"></ion-img>
+                    </ion-item>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-content>
+    <ion-footer>
+        <app-base-button (callback)="prev()" [buttonStyle]="buttonStyleBack">Retake</app-base-button>
+        <app-base-button (callback)="openPhotoCom()" [buttonStyle]="buttonStyle">Use</app-base-button>
+    </ion-footer>
+</ng-template>

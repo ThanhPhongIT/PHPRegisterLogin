@@ -1,0 +1,12 @@
+<ion-grid>
+    <ion-row [style.background]="data.bgColor">
+        <ion-col size="2">
+            <img [src]="data.imgLeft" alt="">
+        </ion-col>
+        <ion-col size="10">
+            <div class="title">{{data.title}}</div>
+            <div class="content">{{data.content}}</div>
+            <button (click)="callback.emit()">{{data.buttonTitle}}</button>
+        </ion-col>
+    </ion-row>
+</ion-grid>

@@ -1,0 +1,29 @@
+<ion-grid>
+    <ion-row>
+        <ion-col size="12">
+            <ion-item lines="none">
+                <div class="icon">
+                    <img
+                        [src]="icon"
+                        alt=""
+                    >
+                </div>
+                <div class="title">
+                    {{title}}
+                </div>
+                <div
+                    class="next"
+                    slot="end"
+                >
+                    <button (click)="callback.emit()">
+                        <img
+                            src="assets/icon/arrow-right.svg"
+                            alt=""
+                        >
+                    </button>
+
+                </div>
+            </ion-item>
+        </ion-col>
+    </ion-row>
+</ion-grid>

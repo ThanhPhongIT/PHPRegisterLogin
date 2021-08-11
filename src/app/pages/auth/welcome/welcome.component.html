@@ -1,0 +1,21 @@
+<ion-content class="welcome">
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide class="slide-item">
+      <img src="assets/svg/auth/slide-welcome.svg" alt="">
+      <span>Welcome to the gateway to the new normal, where healthcare becomes your confident passport of visit.</span>
+    </ion-slide>
+    <ion-slide class="slide-item">
+      <img src="assets/svg/auth/slide-welcome.svg" alt="">
+      <span>Welcome to the gateway to the new normal, where healthcare becomes your confident passport of visit.</span>
+    </ion-slide>
+    <ion-slide class="slide-item">
+      <img src="assets/svg/auth/slide-welcome.svg" alt="">
+      <span>Welcome to the gateway to the new normal, where healthcare becomes your confident passport of visit.</span>
+    </ion-slide>
+  </ion-slides>
+  <ion-row class="welcome-button">
+    <app-base-button [buttonStyle]="{width: '315px', cssClass: 'button-blue'}" (callback)="onCallBack($event)">Get
+      Started
+    </app-base-button>
+  </ion-row>
+</ion-content>

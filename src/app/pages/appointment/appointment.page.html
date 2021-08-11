@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>appointment</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <app-base-input
+        [config]="inputConfig"
+        [buttonInfo]="{
+    type: 2,
+    text:['back','next']
+  }"
+        (callback)="checkModel($event)"
+    >
+    </app-base-input>
+    <app-base-input
+        [config]="inputConfig"
+        [buttonInfo]="{
+    type: 1,
+    text:['save']
+  }"
+        (callback)="checkModel($event)"
+    >
+    </app-base-input>
+</ion-content>

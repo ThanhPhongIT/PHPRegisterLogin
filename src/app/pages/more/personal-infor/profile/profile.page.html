@@ -1,0 +1,117 @@
+<ion-header>
+    <app-base-header-back [headerTitle]="'Profile'"
+                          [defaultHref]="'/more/personal'">
+    </app-base-header-back>
+</ion-header>
+
+<ion-content>
+    <ion-grid class="profile"
+              *ngIf="profile$ | async as profileDetail">
+        <!-- avt -->
+        <ion-row>
+            <ion-col size="12"
+                     class="profile-banner">
+                <div class="avatar">
+                    <img *ngIf="avatar | async as av"
+                         [src]="av"
+                         alt="">
+                    <img *ngIf="avatar.value === null"
+                         [src]="profileDetail.Avatar"
+                         alt="">
+
+
+                    <div class="camera"
+                         (click)="changePhoto()">
+                        <img src="assets/icon/camera.svg"
+                             alt="">
+                    </div>
+                </div>
+                <div class="h2 ion-text-center">
+                    {{profileDetail.FullName}}
+                </div>
+                <!-- <button class="btn-sm-success">
+                    Verified
+                </button> -->
+
+                <div class="verified"
+                     *ngIf="profileDetail.Verified == true">Verified</div>
+                <div class="verified-not"
+                     *ngIf="profileDetail.Verified == false">Not yet verified</div>
+            </ion-col>
+        </ion-row>
+
+        <!-- bar -->
+        <ion-row class="profile-edit ion-align-items-center">
+            <ion-col size="
+            2">
+                <img src="assets/svg/more/icon-profile.svg"
+                     alt="">
+            </ion-col>
+            <ion-col size="9">
+                Profile
+            </ion-col>
+            <ion-col size="1"
+                     class="ion-justify-content-end"
+                     routerLink="profile-edit">
+                <img src="assets/svg/more/icon-edit.svg"
+                     alt="">
+            </ion-col>
+
+        </ion-row>
+
+        <!-- info -->
+        <ion-row>
+            <ion-col size="12">
+                <div class="card-info">
+                    <div class="text-label item">
+                        Gender
+                    </div>
+                    <div class="text-input item">
+                        {{profileDetail.Gender}}
+                    </div>
+                </div>
+
+                <div class="card-info">
+                    <div class="text-label item">
+                        Date of birth
+                    </div>
+                    <div class="text-input item">
+                        {{profileDetail.DOB | date:'MM/dd/yy' }}
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="text-label item">
+                        Phone number
+                    </div>
+                    <div class="text-input item">
+                        {{profileDetail.Phone}}
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="text-label item">
+                        Email
+                    </div>
+                    <div class="text-input item">
+                        {{profileDetail.Email}}
+                    </div>
+                </div>
+                <div class="card-info">
+                    <div class="text-label item">
+                        Address
+                    </div>
+                    <div class="text-input item">
+                        {{profileDetail.Address}}
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+
+
+
+
+
+    </ion-grid>
+
+
+
+</ion-content>

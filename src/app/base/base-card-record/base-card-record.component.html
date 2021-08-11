@@ -1,0 +1,22 @@
+<div class="base-card-record">
+  <div class="avatar">
+    <img [src]="data.avatarURL" alt="" />
+  </div>
+  <div class="name">
+    {{ data.name }}
+  </div>
+  <div class="vaccineName">
+    <p class="text-record-detail">{{ data.vaccineName }}</p>
+  </div>
+  <div class="provider">
+    <p class="text-record-detail">Received at: {{ data.provider }}</p>
+  </div>
+  <div class="date">
+    <span class="text-record-detail">Dose 1: {{data.startDate}}</span>
+    <span class="text-record-detail">Dose 2: {{data.endDate}}</span>
+  </div>
+  <div class="button">
+    <button *ngIf="data.status==1" class="not-verified">Not yet verified</button>
+    <button *ngIf="data.status==2" class="verified">Verified</button>
+  </div>
+</div>

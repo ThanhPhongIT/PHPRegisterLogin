@@ -1,0 +1,28 @@
+<app-base-header-back></app-base-header-back>
+<ion-content>
+    <ion-grid class="forgot">
+        <ion-row>
+            <ion-col
+                size="12"
+                class="forgot-title"
+            >
+                <h1>Reset your password</h1>
+            </ion-col>
+            <ion-col
+                size="12"
+                class="forgot-phone"
+            >
+                <app-base-input
+                    (callback)="onCallBack($event)"
+                    [config]="
+                    inputConfig"
+                    [buttonInfo]="{
+          type: 1,
+          text: ['Confirm']
+        }"
+                >
+                </app-base-input>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>
